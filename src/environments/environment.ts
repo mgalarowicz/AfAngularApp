@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  tracking: {
+    sendRepoAndEmail: 'https://afaddons.azurewebsites.net/api/StoreRepoUrlWithEmail?code=msNGH7qiLLJ9qay4dxNwJix5dXPnFiqCSmeE3MsLIqKLmz1gZYiF3w=='
+  }
 };
 
 /*
