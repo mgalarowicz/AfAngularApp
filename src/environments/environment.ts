@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   tracking: {
-    sendRepoAndEmail: 'https://afaddons.azurewebsites.net/api/StoreRepoUrlWithEmail?code=msNGH7qiLLJ9qay4dxNwJix5dXPnFiqCSmeE3MsLIqKLmz1gZYiF3w=='
+    sendRepoAndEmail: 'https://afaddons1.azurewebsites.net/api/StoreRepoUrlWithEmail?code=gYWVaL7bxbPjjB0x7RNrK5aajqvhidmpu112e2vwbpHacJADL9u9ew=='
   }
 };
 

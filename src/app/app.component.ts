@@ -18,14 +18,16 @@ export class AppComponent {
     createForm() {
       this.angForm = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
-        repository: ['', Validators.required ]
+        repository: ['', Validators.required ],
+        addon: ['', Validators.required ]
       });
     }
 
     onSubmit() {
       let body = {
         fromRepo:this.angForm.controls.repository.value,
-        fromEmail:this.angForm.controls.email.value
+        fromEmail:this.angForm.controls.email.value,
+        fromAddon:this.angForm.controls.addon.value
       };
       this.repoEmailService.sendRepoEmail(body);
       alert(JSON.stringify(this.angForm.value))

@@ -21,9 +21,18 @@
           </div>
           <div *ngIf="angForm.controls['repository'].invalid && (angForm.controls['repository'].dirty || angForm.controls['repository'].touched)" class="alert alert-danger">
               <div *ngIf="angForm.controls['repository'].errors.required">
-                repository is required.
+                Repository is required.
               </div>
           </div>
+          <div class="form-group">
+            <label>Addon Name:</label>
+            <input class="form-control" formControlName="addon" type="text">
+          </div>
+          <div *ngIf="angForm.controls['addon'].invalid && (angForm.controls['addon'].dirty || angForm.controls['addon'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['addon'].errors.required">
+              Addon name is required.
+            </div>
+         </div>
           <button type="submit"
               [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
               Test it!
