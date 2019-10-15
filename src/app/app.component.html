@@ -26,16 +26,36 @@
           </div>
           <div class="form-group">
             <label>Addon Name:</label>
-            <input class="form-control" formControlName="addon" type="text">
+            <input class="form-control" formControlName="addonName" type="text">
           </div>
-          <div *ngIf="angForm.controls['addon'].invalid && (angForm.controls['addon'].dirty || angForm.controls['addon'].touched)" class="alert alert-danger">
-            <div *ngIf="angForm.controls['addon'].errors.required">
+          <div *ngIf="angForm.controls['addonName'].invalid && (angForm.controls['addonName'].dirty || angForm.controls['addonName'].touched)" class="alert alert-danger">
+            <div *ngIf="angForm.controls['addonName'].errors.required">
               Addon name is required.
             </div>
          </div>
-          <button type="submit"
+         <div class="form-group">
+          <label>Addon Id:</label>
+          <input class="form-control" formControlName="addonId" type="text">
+          </div>
+          <div class="form-group">
+            <label>Partner Id:</label>
+            <input class="form-control" formControlName="partnerId" type="text">
+          </div>
+          <div class="form-group">
+            <label>Build Id:</label>
+            <input class="form-control" formControlName="buildId" type="text">
+          </div>
+          <button type="submit" (click)="onSubmit('Register')"
               [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
-              Test it!
+              Register
+          </button>
+          <button type="submit" (click)="onSubmit('Update')"
+              [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+              Update
+          </button>
+          <button type="submit" (click)="onSubmit('Download')"
+              [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+              DownloadArtifact
           </button>
     </form>
   </div>

@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   tracking: {
-    sendRepoAndEmail: 'https://afaddons1.azurewebsites.net/api/StoreRepoUrlWithEmail?code=gYWVaL7bxbPjjB0x7RNrK5aajqvhidmpu112e2vwbpHacJADL9u9ew=='
+    clientRequest: 'http://localhost:7071/api/ClientRequestValidation',
+    downloadArt: 'http://localhost:7071/api/Artifact'
   }
 };
 
