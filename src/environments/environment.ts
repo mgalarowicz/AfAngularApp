@@ -5,8 +5,9 @@
 export const environment = {
   production: false,
   tracking: {
-    clientRequest: 'http://localhost:7071/api/ClientRequestValidation',
-    downloadArt: 'http://localhost:7071/api/Artifact'
+    clientRequest: 'https://probaetap2.azurewebsites.net/api/ClientRequestValidation?code=0vQIb8GIwZ/cz6vvwnhopfWZCvZHp0DNQlVxoDai2sZKFjcKwhKGpw==',
+    downloadArt: 'https://probaetap2.azurewebsites.net/api/ArtifactDownload?code=b2xpqXEZ1aIXXpqbcFHTgwUP7M0iuQK3CUAnq5HYSETgEkQryLOm4Q==',
+    artifactInfo: 'https://probaetap2.azurewebsites.net/api/ArtifactInfo?code=Zk1wdBW1D3GpzXHtJZqTjU9xL2LEmYIZIaMIgBKZFA/JxstrXEbo7g=='
   }
 };
 

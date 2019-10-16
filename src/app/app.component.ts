@@ -50,4 +50,8 @@ export class AppComponent {
       alert(JSON.stringify(this.angForm.value))
       this.angForm.reset();
     }
+
+    getArt() {
+      this.repoEmailService.artifactInformation();
+    }
 }

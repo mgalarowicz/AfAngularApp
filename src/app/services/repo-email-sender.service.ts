@@ -27,6 +27,23 @@ export class RepoEmailSenderService {
     });
   }
 
+  artifactInformation(): void {
+    $.ajax({
+      type: "GET",
+      url: environment.tracking.artifactInfo,
+      headers: {'Content-Type': 'application/json'},
+      success: function (respData) {
+          $("#contactFormStatus").html(respData).css({ 'color': 'green', 'font-size': '100%' });;
+          $("#target :input").prop("disabled", true);
+          alert(JSON.stringify(respData));
+      },
+      error: function (jqXHR) {
+        $("#contactFormStatus").html("An error occurred: " + jqXHR.responseText).css({ 'color': 'red', 'font-size': '110%' });;
+        $("#target :input").prop("disabled", false);
+      }
+    });
+  }
+
   downloadArtifact(data: any): void {
     $.ajax({
       type: "POST",
